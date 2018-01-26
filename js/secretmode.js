@@ -25,7 +25,7 @@ window.onload = function() {
 	    game.rootScene.addChild(bg);
   var charactor = new Sprite(178, 290);
     charactor.moveTo(135,30);
-  charactor.image = game.assets['images/meid_red_def.png'];
+  charactor.image = game.assets['images/bikini_smile.png'];
       game.rootScene.addChild(charactor);
   var bgm2 = game.assets['sounds/scene3.mp3'].clone();
       game.onenterframe=function(){ //enterframeイベントのイベントリスナー
@@ -35,33 +35,33 @@ window.onload = function() {
       };
 
 	//メッセージの作成
-	game.rootScene.addChild(makeMessage("どこに行く？？"));
+	game.rootScene.addChild(makeMessage("全問正解、おめでとう！誰と遊ぶ？"));
 
 	//選択肢の生成
-  var select0=makeSelect("【首里城】",10, 318 - 12 * 6);
+  var select0=makeSelect("【シュリ様】",10, 318 - 12 * 6);
  select0.addEventListener(Event.TOUCH_START, function(e) {
      game.pushScene(game.makeScene1());
  });
  game.rootScene.addChild(select0);
 
- var select1=makeSelect("【勝連城】",74, 318 - 12 * 6);
+ var select1=makeSelect("【カナ様】",90, 318 - 12 * 6);
  select1.addEventListener(Event.TOUCH_START, function(e) {
      game.pushScene(game.makeScene20());
  });
  game.rootScene.addChild(select1);
- var select2=makeSelect("【座喜味城】",138, 318 - 12 * 6);
+ var select2=makeSelect("【ユキ様】",154, 318 - 12 * 6);
  select2.addEventListener(Event.TOUCH_START, function(e) {
      game.pushScene(game.makeScene40());
  });
  game.rootScene.addChild(select2);
 
- var select3=makeSelect("【今帰仁城】",10, 318 - 12 * 4);
+ var select3=makeSelect("【ミサト様】",10, 318 - 12 * 4);
  select3.addEventListener(Event.TOUCH_START, function(e) {
      game.pushScene(game.makeScene60());
  });
  game.rootScene.addChild(select3);
 
- var select4=makeSelect("【中城城】",90, 318 - 12 * 4);
+ var select4=makeSelect("【ミレイ様】",90, 318 - 12 * 4);
  select4.addEventListener(Event.TOUCH_START, function(e) {
      game.pushScene(game.makeScene80());
  });
@@ -357,7 +357,7 @@ charactor.image = game.assets['images/meid_black_glad.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("全問正解おめでとう！キーワードは【塾】だよ！またいつでも、しゅりに会いに来てね…？"));
+scene.addChild(makeMessage("全問正解おめでとう！またいつでも、しゅりに会いに来てね…？"));
 //選択肢の生成
 var select1 = makeSelect("【最初にもどる】", 150, 320 - 12 * 2);
 select1.addEventListener(Event.TOUCH_START, function(e) {
@@ -455,7 +455,7 @@ charactor.image = game.assets['images/bikini_smile.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("かな:んでね、勝連城のことなんだけど、ここは世界遺産に登録されたグスクの中でも最古のグスクなんだ。13世紀-14世紀に茂知附按司により築城されたと言われている。"));
+scene.addChild(makeMessage("かな:んでね、勝連城のことなんだけど、ここは世界遺産に登録されたグスクの中でも最古のグスクなんだ。"));
 var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
   game.pushScene(game.makeScene23());
@@ -547,7 +547,7 @@ charactor.image = game.assets['images/bikini_smile.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("かな:城は勝連半島の南の付け根部にある丘陵に位置していてだな、南城（ヘーグシク）、中間の内、北城（ニシグシク）で構成されているんだ。 "));
+scene.addChild(makeMessage("かな:でもな！勝連城には琉球の時代のでもドラマチックなストーリがある場所だし、歴史ロマンを感じてみるのもいいな！ "));
 var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
   game.pushScene(game.makeScene27());
@@ -556,81 +556,8 @@ scene.addChild(select0);
 return scene;
 };
 
-
 //シーン27の生成
 game.makeScene27 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/katsuren.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/bikini_smile.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("かな:北城は石垣で仕切られた一から三の郭が階段状に連なっていて、一番高い一の郭は標高約100mの丘陵上にあるんだぞ。たっけぇ〜！ "));
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene28());
-});
-scene.addChild(select0);
-return scene;
-};
-
-
-//シーン28の生成
-game.makeScene28 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/katsuren.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/bikini_smile.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("かな:城内からは中国、元代の陶磁器（染付）が出土していて、歌謡集『おもろさうし』からも当時の繁栄をみることができるんだ。 "));
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene29());
-});
-scene.addChild(select0);
-return scene;
-};
-
-//シーン29の生成
-game.makeScene29 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/katsuren.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/bikini_smile.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("かな:おもろさうし』（おもろそうし）は、琉球王国第4代尚清王代の嘉靖10年（1531年）から尚豊王代の天啓3年（1623年）にかけて首里王府によって編纂された歌謡集だ。 "));
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene30());
-});
-scene.addChild(select0);
-return scene;
-};
-
-
-
-//シーン30の生成
-game.makeScene30 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -647,7 +574,7 @@ scene.addChild(makeMessage("おおおおおい！目が半開きだぞ？お前�
 //選択肢の生成
 var select0 = makeSelect("【阿麻和利】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene31());
+    game.pushScene(game.makeScene28());
 });
 scene.addChild(select0);
 
@@ -659,8 +586,8 @@ scene.addChild(select1);
 return scene;
 };
 
-//シーン31の生成
-game.makeScene31 = function() {
+//シーン28の生成
+game.makeScene28 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -683,14 +610,14 @@ scene.addChild(select0);
 
 var select1 = makeSelect("【首里城】", 60, 320 - 12 * 2);
 select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene32());
+    game.pushScene(game.makeScene29());
 });
 scene.addChild(select1);
 return scene;
 };
 
-//シーン32の生成
-game.makeScene32 = function() {
+//シーン29の生成
+game.makeScene29 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -703,7 +630,7 @@ charactor.image = game.assets['images/bikini_smile.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("その通りだ！！３つ目の問題だ。阿麻和利が城を攻めた目的は？"));
+scene.addChild(makeMessage("その通りだ！！最後の問題だ。阿麻和利が城を攻めた目的は？"));
 //選択肢の生成
 var select0 = makeSelect("【王権の簒奪】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
@@ -713,14 +640,14 @@ scene.addChild(select0);
 
 var select1 = makeSelect("【わからない】", 110, 320 - 12 * 2);
 select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene33());
+    game.pushScene(game.makeScene30());
 });
 scene.addChild(select1);
 return scene;
 };
 
-//シーン33の生成
-game.makeScene33 = function() {
+//シーン30の生成
+game.makeScene30 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -733,37 +660,7 @@ charactor.image = game.assets['images/bikini_smile.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("では最後の問題だ！！『おもろさうし』は"));
-//選択肢の生成
-var select0 = makeSelect("【歌謡集】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene34());
-});
-scene.addChild(select0);
-
-var select1 = makeSelect("【随筆】", 110, 320 - 12 * 2);
-select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene35());
-});
-scene.addChild(select1);
-return scene;
-};
-
-//シーン34の生成
-game.makeScene34 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/katsuren.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/bikini_smile.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("流石だ！キーワードは【長】だ！またいつでも来てくれていいんだからな！"));
+scene.addChild(makeMessage("流石だ！またいつでも来てくれていいんだからな！"));
 //選択肢の生成
 var select1 = makeSelect("【最初にもどる】", 150, 320 - 12 * 2);
 select1.addEventListener(Event.TOUCH_START, function(e) {
@@ -930,7 +827,7 @@ charactor.image = game.assets['images/meid_red_def.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("ゆき:城内で演劇が行われたりと、幅広く利用されているの。グスクを上ると残波岬や慶良間諸島も観ることができるわ。歴史と絶景両方とも楽しめる場所よ。"));
+scene.addChild(makeMessage("ゆき:グスクを上ると残波岬や慶良間諸島も観ることができるわ。歴史と絶景両方とも楽しめる場所よ。"));
 var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
   game.pushScene(game.makeScene46());
@@ -953,35 +850,11 @@ charactor.image = game.assets['images/meid_red_def.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("ゆき:沖縄戦前には日本軍の砲台、戦後には米軍のレーダー基地が置かれていたから、一部城壁が破壊されてしまったのだけれど。城壁の復元は即座に行われたわ。"));
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene47());
-});
-scene.addChild(select0);
-return scene;
-};
-
-
-//シーン47の生成
-game.makeScene47 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/zakimi002.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/meid_red_def.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
 scene.addChild(makeMessage("さて、そろそろ復習タイムとしましょうか。座喜味城を手がけた築城家の名前を言ってみなさい？"));
 //選択肢の生成
 var select0 = makeSelect("【護佐丸だろ？】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene48());
+    game.pushScene(game.makeScene47());
 });
 scene.addChild(select0);
 var select1 = makeSelect("【阿麻和利だろ】", 125, 320 - 12 * 2);
@@ -994,8 +867,8 @@ return scene;
 
 
 
-//シーン48の生成
-game.makeScene48 = function() {
+//シーン47の生成
+game.makeScene47 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -1024,40 +897,8 @@ scene.addChild(select1);
 return scene;
 };
 
-
 //シーン49の生成
 game.makeScene49 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/zakimi002.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/meid_red_def.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("最後の質問よ！一部城壁が破壊されてしまったことがあるのだけれど、一体何があったのかしら？"));
-//選択肢の生成
-var select0 = makeSelect("【日中戦争】", 125, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene55());
-});
-scene.addChild(select0);
-
-var select1 = makeSelect("【沖縄戦争】", 10, 320 - 12 * 2);
-select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene50());
-});
-scene.addChild(select1);
-return scene;
-};
-
-
-//シーン50の生成
-game.makeScene50 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -1070,7 +911,7 @@ charactor.image = game.assets['images/meid_red_smile.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("あら、全問正解よ！キーワードは【は】よ。中々やるじゃない。"));
+scene.addChild(makeMessage("あら、全問正解よ！中々やるじゃない。"));
 //選択肢の生成
 var select1 = makeSelect("【最初にもどる】", 150, 320 - 12 * 2);
 select1.addEventListener(Event.TOUCH_START, function(e) {
@@ -1268,7 +1109,7 @@ charactor.image = game.assets['images/twin.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("みさと:北山は尚巴志に1416年に滅ぼされましたが、その後も旧北山統治の要所として引き続き使用され、北山監守が派遣されたんです。"));
+scene.addChild(makeMessage("みさと:天気のいい日には、伊是名島や伊平屋島も望めたりして！なっなんだかこう…ロマンチック・・・だと思いませんか？"));
 var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
   game.pushScene(game.makeScene67());
@@ -1291,8 +1132,8 @@ charactor.image = game.assets['images/twin.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("みさと:1609年の薩摩藩による琉球侵攻の際には、その攻撃の第一目標となったそうです。"));
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
+scene.addChild(makeMessage("みさと:い…いつか ボ ー イ フ レ ン ド と見れたらなあ…なんて思っているワケなのです"));
+var select0 = makeSelect("【僕じゃ駄目ですか】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
   game.pushScene(game.makeScene68());
 });
@@ -1310,16 +1151,22 @@ bg.image = game.assets['images/NAKIJIN.jpg'];
 scene.addChild(bg);
 var charactor = new Sprite(178, 290);
   charactor.moveTo(135,30);
-charactor.image = game.assets['images/twin.png'];
+charactor.image = game.assets['images/twin_worry.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("みさと:門から城の中心部へと向かう階段の左右にはカンヒザクラの並木があり、毎年1月末から2月始めに開花します。"));
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
+scene.addChild(makeMessage("はわわ…!?!?ほあぇg@$%#!?もももっ…問題ですよ…！今帰仁城はなんと読むでしょう？"));
+//選択肢の生成
+var select0 = makeSelect("【なきじんじょう】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene69());
+    game.pushScene(game.makeScene69());
 });
 scene.addChild(select0);
+var select1 = makeSelect("【こんきにんじょう】", 150, 320 - 12 * 2);
+select1.addEventListener(Event.TOUCH_START, function(e) {
+    game.pushScene(game.makeScene75());
+});
+scene.addChild(select1);
 return scene;
 };
 
@@ -1333,18 +1180,26 @@ bg.image = game.assets['images/NAKIJIN.jpg'];
 scene.addChild(bg);
 var charactor = new Sprite(178, 290);
   charactor.moveTo(135,30);
-charactor.image = game.assets['images/twin.png'];
+charactor.image = game.assets['images/twin_smile.png'];
     scene.addChild(charactor);
 
-//ラベルの生成
-scene.addChild(makeMessage("みさと:城内からは中国や東南アジアなどの陶磁器が多く出土し、往時の繁栄をうかがわせています。"));
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
+//ラベルの生成、突拍子もないこと仰るような方ですが…ちゃんと私の話、聞いていてくれたのですね…！
+scene.addChild(makeMessage("素晴らしいです！ではいつ頃建てられたでしょう？"));
+//選択肢の生成
+var select0 = makeSelect("【13世紀】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene70());
+    game.pushScene(game.makeScene70());
 });
 scene.addChild(select0);
+var select1 = makeSelect("【15世紀】", 150, 320 - 12 * 2);
+select1.addEventListener(Event.TOUCH_START, function(e) {
+    game.pushScene(game.makeScene75());
+});
+scene.addChild(select1);
 return scene;
 };
+
+
 
 //シーン70の生成
 game.makeScene70 = function() {
@@ -1356,18 +1211,25 @@ bg.image = game.assets['images/NAKIJIN.jpg'];
 scene.addChild(bg);
 var charactor = new Sprite(178, 290);
   charactor.moveTo(135,30);
-charactor.image = game.assets['images/twin.png'];
+charactor.image = game.assets['images/twin_smile.png'];
     scene.addChild(charactor);
-
 //ラベルの生成
-scene.addChild(makeMessage("みさと:城内からは中国や東南アジアなどの陶磁器が多く出土し、往時の繁栄をうかがわせています。"));
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
+scene.addChild(makeMessage("おおお〜、流石です！ではこのグスクを手がけた方は…？"));
+//選択肢の生成
+var select0 = makeSelect("【北山王】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene71());
+    game.pushScene(game.makeScene71());
 });
 scene.addChild(select0);
+var select1 = makeSelect("【花城王】", 150, 320 - 12 * 2);
+select1.addEventListener(Event.TOUCH_START, function(e) {
+    game.pushScene(game.makeScene75());
+});
+scene.addChild(select1);
 return scene;
 };
+
+
 
 //シーン71の生成
 game.makeScene71 = function() {
@@ -1379,149 +1241,11 @@ bg.image = game.assets['images/NAKIJIN.jpg'];
 scene.addChild(bg);
 var charactor = new Sprite(178, 290);
   charactor.moveTo(135,30);
-charactor.image = game.assets['images/twin_worry.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("あと！本部町の八重岳などと並び、桜の名所として知られているんですよ！伊是名島や伊平屋島も望めます。いつかボーイフレンドと…"));
-//選択肢の生成
-var select0 = makeSelect("【僕じゃダメですか】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene72());
-});
-scene.addChild(select0);
-return scene;
-};
-
-//シーン72の生成
-game.makeScene72 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKIJIN.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/twin_smile.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成、突拍子もないこと仰るような方ですが…ちゃんと私の話、聞いていてくれたのですね…！
-scene.addChild(makeMessage("ほ、ほわぇぇぇ&%$#`！？！？//ちょっ…問題ですよ！！いつ頃築城されたでしょう？`"));
-//選択肢の生成
-var select0 = makeSelect("【13世紀】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene73());
-});
-scene.addChild(select0);
-var select1 = makeSelect("【15世紀】", 150, 320 - 12 * 2);
-select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene77());
-});
-scene.addChild(select1);
-return scene;
-};
-
-//シーン73の生成
-game.makeScene73 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKIJIN.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/twin_smile.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成、突拍子もないこと仰るような方ですが…ちゃんと私の話、聞いていてくれたのですね…！
-scene.addChild(makeMessage("素晴らしいです！誰が築いたグスクでしょう？"));
-//選択肢の生成
-var select0 = makeSelect("【北山王】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene74());
-});
-scene.addChild(select0);
-var select1 = makeSelect("【花城王】", 150, 320 - 12 * 2);
-select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene77());
-});
-scene.addChild(select1);
-return scene;
-};
-
-
-
-//シーン74の生成
-game.makeScene74 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKIJIN.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/twin_smile.png'];
-    scene.addChild(charactor);
-//ラベルの生成
-scene.addChild(makeMessage("おおお〜、流石です！では城内から何が出土したでしょう？"));
-//選択肢の生成
-var select0 = makeSelect("【中国や東南アジアの陶磁器】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene75());
-});
-scene.addChild(select0);
-var select1 = makeSelect("【スリランカや西インドの陶磁器】", 150, 320 - 12 * 2);
-select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene77());
-});
-scene.addChild(select1);
-return scene;
-};
-
-
-
-//シーン75の生成
-game.makeScene75 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKIJIN.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
 charactor.image = game.assets['images/twin.png'];
     scene.addChild(charactor);
 
 //ラベルの生成、突拍子もないこと仰るような方ですが…ちゃんと私の話、聞いていてくれたのですね…！
-scene.addChild(makeMessage("そうそう。諸説あるんですけどね。…はっ！！？かかか…完璧じゃないですか！！"));
-//選択肢の生成
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene76());
-});
-scene.addChild(select0);
-return scene;
-};
-
-//シーン76の生成
-game.makeScene76 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKIJIN.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/twin.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成、突拍子もないこと仰るような方ですが…ちゃんと私の話、聞いていてくれたのですね…！
-scene.addChild(makeMessage("突拍子もないこと仰るような方ですが…ちゃんと私の話、聞いていてくれたのですね//はっ！！キーワードは【諭】ですよ！"));
+scene.addChild(makeMessage("そうそう。諸説あるんですけどね。…はっ！！？かかか…完璧じゃないですか！！突拍子もないこと仰るような方ですが…ちゃんと私の話、聞いていてくれたのですね//"));
 //選択肢の生成
 var select1 = makeSelect("【最初にもどる】", 150, 320 - 12 * 2);
 select1.addEventListener(Event.TOUCH_START, function(e) {
@@ -1531,10 +1255,8 @@ scene.addChild(select1);
 return scene;
 };
 
-
-
-//シーン77の生成
-game.makeScene77 = function() {
+//シーン75の生成
+game.makeScene75 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -1559,7 +1281,6 @@ select0.addEventListener(Event.TOUCH_START, function(e) {
 scene.addChild(select0);
 return scene;
 };
-
 
 //シーン80の生成
 game.makeScene80 = function() {
@@ -1669,12 +1390,12 @@ bg.image = game.assets['images/NAKAGUSUKU.jpg'];
 scene.addChild(bg);
 var charactor = new Sprite(178, 290);
   charactor.moveTo(135,30);
-charactor.image = game.assets['images/meid_brow_ang.png'];
+charactor.image = game.assets['images/meid_brow.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("みれい:14世紀後半頃迄に先中城按司（さちなかぐずくあじ）が数世代にわたり南の郭、西の郭、一の郭、二の郭の主要部分を築き上げ、"));
-var select0 = makeSelect("【次へ】", 168, 313 - 12 * 2);
+scene.addChild(makeMessage("みれい:冬至の季節には「わかてだを見る集い」っていうイベントが開催されるの。日の出とともに伝統芸能を楽しむことができるわ。"));
+var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
   game.pushScene(game.makeScene85());
 });
@@ -1696,8 +1417,8 @@ charactor.image = game.assets['images/meid_brow_ang.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("みれい:1440年に読谷の座喜味城から移ってきた護佐丸盛春によって、三の郭、北の郭が増築され現在の形が完成したと言われているわ！"));
-var select0 = makeSelect("【次へ】", 168, 313 - 12 * 2);
+scene.addChild(makeMessage("みれい:べ、別にあなたと行きたいとか言ってるわけじゃないんだからね…！"));
+var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
   game.pushScene(game.makeScene86());
 });
@@ -1715,121 +1436,6 @@ bg.image = game.assets['images/NAKAGUSUKU.jpg'];
 scene.addChild(bg);
 var charactor = new Sprite(178, 290);
   charactor.moveTo(135,30);
-charactor.image = game.assets['images/meid_brow_ang.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("みれい:増築されたその部分の城壁は「相方積み」という高度な技法で積み上げられているの。"));
-var select0 = makeSelect("【次へ】", 168, 313 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene87());
-});
-scene.addChild(select0);
-return scene;
-};
-
-//シーン87の生成
-game.makeScene87 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKAGUSUKU.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/meid_brow_ang.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("みれい:1458年に護佐丸は王府軍としてやって来た阿麻和利の策略に攻められ自害して滅びてしまったわ。"));
-var select0 = makeSelect("【次へ】", 168, 313 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene88());
-});
-scene.addChild(select0);
-return scene;
-};
-
-//シーン88の生成
-game.makeScene88 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKAGUSUKU.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/meid_brow_ang.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("みれい:1609年以後の薩摩の植民地時代、中国からの冊封使節団が来琉した際、薩摩の役人は自らの存在を中国に知られないためにここに隠れていたという伝承もあるの。"));
-var select0 = makeSelect("【次へ】", 168, 313 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene89());
-});
-scene.addChild(select0);
-return scene;
-};
-
-//シーン86の生成
-game.makeScene89 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKAGUSUKU.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/meid_brow.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("みれい:ちなみに冬至の季節には「わかてだを見る集い」っていうイベントが開催されるのよ。日の出とともに伝統芸能を楽しむことができるわ。"));
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene90());
-});
-scene.addChild(select0);
-return scene;
-};
-
-//シーン90の生成
-game.makeScene90 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKAGUSUKU.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/meid_brow_ang.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("みれい:べ、別にあなたと行きたいとか言ってるわけじゃないんだからね…！"));
-var select0 = makeSelect("【次へ】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-  game.pushScene(game.makeScene91());
-});
-scene.addChild(select0);
-return scene;
-};
-
-//シーン86の生成
-game.makeScene91 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKAGUSUKU.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
 charactor.image = game.assets['images/meid_brow.png'];
     scene.addChild(charactor);
 
@@ -1838,21 +1444,21 @@ scene.addChild(makeMessage("き、聞いてんの？確認するからね？中�
 //選択肢の生成
 var select0 = makeSelect("【なかぐすくじょう】", 10, 298 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene92());
+    game.pushScene(game.makeScene87());
 });
 scene.addChild(select0);
 
 var select1 = makeSelect("【ちゅうじょうじょう】", 10, 320 - 12 * 2);
 select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene99());
+    game.pushScene(game.makeScene90());
 });
 scene.addChild(select1);
 
 return scene;
 };
 
-//シーン92の生成
-game.makeScene92 = function() {
+//シーン87の生成
+game.makeScene87 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -1869,20 +1475,20 @@ scene.addChild(makeMessage("うん。いや、まだアンタの事認めたわ�
 //選択肢の生成
 var select0 = makeSelect("【結構悪そう】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene99());
+    game.pushScene(game.makeScene90());
 });
 scene.addChild(select0);
 
 var select1 = makeSelect("【結構良さそう】", 10, 303 - 12 * 2);
 select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene93());
+    game.pushScene(game.makeScene88());
 });
 scene.addChild(select1);
 return scene;
 };
 
-//シーン93の生成
-game.makeScene93 = function() {
+//シーン88の生成
+game.makeScene88 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -1895,54 +1501,24 @@ charactor.image = game.assets['images/meid_brow_smile.png'];
     scene.addChild(charactor);
 
 //ラベルの生成
-scene.addChild(makeMessage("ハッキリ「良い」って言ってくれない？バーカ！！1458年、護佐丸は誰の策略に攻められて自害したのか覚えてる？"));
-//選択肢の生成
-var select0 = makeSelect("【阿麻和利】", 10, 320 - 12 * 2);
-select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene94());
-});
-scene.addChild(select0);
-
-var select1 = makeSelect("【向日葵利】", 10, 300 - 12 * 2);
-select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene99());
-});
-scene.addChild(select1);
-return scene;
-};
-
-//シーン94の生成
-game.makeScene94 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKAGUSUKU.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/meid_brow_smile.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("やるじゃん…じゃあ最後。冬至の季節に何てイベントが開催されるのよ？"));
+scene.addChild(makeMessage("ハッキリ「良い」って言ってくれない？バーカ！！じゃあ最後…冬至の季節に何てイベントが開催されるのよ？"));
 //選択肢の生成
 var select0 = makeSelect("【わかてだを見る集いだろ？】", 10, 320 - 12 * 2);
 select0.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene95());
+    game.pushScene(game.makeScene89());
 });
 scene.addChild(select0);
 
 var select1 = makeSelect("【みれいを見る集いだろ？】", 10, 300 - 12 * 2);
 select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene99());
+    game.pushScene(game.makeScene90());
 });
 scene.addChild(select1);
 return scene;
 };
 
-//シーン95の生成
-game.makeScene95 = function() {
+//シーン89の生成
+game.makeScene89 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -1957,30 +1533,6 @@ charactor.image = game.assets['images/meid_brow_ang.png'];
 //ラベルの生成
 scene.addChild(makeMessage("あ、あんたやるじゃん…見直した。べっ…別に！！「わかてだを見る集い」一緒に行きたいとか言ってないから…　かっ…勘違いしないでよね？バーカ。"));
 //選択肢の生成
-var select1 = makeSelect("【次へ】", 10, 320 - 12 * 2);
-select1.addEventListener(Event.TOUCH_START, function(e) {
-    game.pushScene(game.makeScene98());
-});
-scene.addChild(select1);
-return scene;
-};
-
-//シーン98の生成
-game.makeScene98 = function() {
-var scene = new Scene();
-
-//背景の生成
-var bg = new Sprite(320, 320);
-bg.image = game.assets['images/NAKAGUSUKU.jpg'];
-scene.addChild(bg);
-var charactor = new Sprite(178, 290);
-  charactor.moveTo(135,30);
-charactor.image = game.assets['images/meid_brow_smile.png'];
-    scene.addChild(charactor);
-
-//ラベルの生成
-scene.addChild(makeMessage("ちなみにキーワードは【吉】よ。これで貴方も秘密のモードで遊べるようになるわ。"));
-//選択肢の生成
 var select1 = makeSelect("【最初にもどる】", 150, 320 - 12 * 2);
 select1.addEventListener(Event.TOUCH_START, function(e) {
   game.replaceScene(game.rootScene);
@@ -1989,8 +1541,8 @@ scene.addChild(select1);
 return scene;
 };
 
-//シーン99の生成
-game.makeScene99 = function() {
+//シーン90の生成
+game.makeScene90 = function() {
 var scene = new Scene();
 
 //背景の生成
@@ -2011,8 +1563,6 @@ select0.addEventListener(Event.TOUCH_START, function(e) {
 scene.addChild(select0);
 return scene;
 };
-
-
 
 //ゲーム開始
 game.start()

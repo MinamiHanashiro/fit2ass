@@ -3,7 +3,17 @@ function move(num){
     location.href="test.html";
   }else{
     for (var i =0; i < 100; i++){
-      alert("水着姿でも見れるとでも思ったの？バーカw");
+      alert("バーカ！");
     }
+    var pw;
+pw = prompt("キーワードを入力してください。","");
+if (pw == "塾長は諭吉"){
+  location.href = "secretmode.html";
+}else{
+  for (var i =0; i < 100; i++){
+  alert("バーカ！ふぁっきゅ！ふぁっきゅ！");
+}
+
   }
+}
 }
